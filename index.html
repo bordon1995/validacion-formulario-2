@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>validacion-2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="enviar-formulario">
+
+    <div class="grupo" id="usuario">
+      <label class="block">Usuario</label>
+      <div class="grupo__input">
+        <input class="input usuario" type="text" name="usuario">
+        <i class="crus fas fa-times-circle"></i>
+        <i class="check fas fa-check-circle"></i>
+      </div>
+      <p class="mensaje-error">Solo puede tener letras y numeros que contengan de 4 a 16 digitos</p>
+    </div>
+
+    <div class="grupo" id="nombre">
+      <label class="block">Nombre</label>
+      <div class="grupo__input">
+        <input class="input nombre" type="text" name="nombre">
+        <i class="crus fas fa-times-circle"></i>
+        <i class="check fas fa-check-circle"></i>
+      </div>
+      <p class="mensaje-error">Solo puede tener letras que contengan de 4 a 16 digitos</p>
+    </div>
+
+    <div class="grupo" id="contraseña">
+      <label class="block">Contraseña</label>
+      <div class="grupo__input">
+        <input class="input contraseña" type="password" name="contraseña">
+        <i class="crus fas fa-times-circle"></i>
+        <i class="check fas fa-check-circle"></i>
+      </div>
+      <p class="mensaje-error">Solo debe contener de 4 a 16 digitos</p>
+    </div>
+
+    <div class="grupo" id="contraseña2">
+      <label class="block">Repetir Contraseña</label>
+      <div class="grupo__input">
+        <input class="input contraseña2" type="password" name="contraseña2">
+        <i class="crus fas fa-times-circle"></i>
+        <i class="check fas fa-check-circle"></i>
+      </div>
+      <p class="mensaje-error">La contraseña no coinside</p>
+    </div>
+
+    <div class="grupo" id="email">
+      <label class="block">Correo Electronico</label>
+      <div class="grupo__input">
+        <input class="input email" type="email" name="email">
+        <i class="crus fas fa-times-circle"></i>
+        <i class="check fas fa-check-circle"></i>
+      </div>
+      <p class="mensaje-error">El email no es valido</p>
+    </div>
+
+    <div class="grupo" id="telefono">
+      <label class="block">Telefono</label>
+      <div class="grupo__input">
+        <input class="input telefono" type="number" name="telefono">
+        <i class="crus fas fa-times-circle"></i>
+        <i class="check fas fa-check-circle"></i>
+      </div>
+      <p class="mensaje-error">Solo puede ingresar un maximo 12 digitos</p>
+    </div>
+
+    <div class="flex posicion-terminos" id="validar-box">
+      <input class="checkbox" type="checkbox" name="checkbox" id="box">
+      <p class="margin">Acepto los Terminos y Condiciones</p>
+    </div>
+    
+    <div class="mensaje-warning">
+      <p>
+        <i class="fas fa-exclamation-triangle"></i>
+        <b>warning : Todos los campos son obligatorios</b>
+      </p>
+    </div>
+
+    <div  class="posicion-boton">
+      <input id="boton" class="style-boton opacidad" type="submit" value="Enviar">
+    </div>
+
+    <div class="posicion-terminos estilo-texto">
+      <p>Formulario enviado correctamente</p>
+    </div>
+
+  </form>
+
+  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/46016f5202.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+:root {
+  --fuente: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgb(224, 224, 224);
+  font-family: var(--fuente);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  display: block;
+  padding-bottom: 10px;
+}
+.block {
+  display: block;
+  margin: 7px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.margin {
+  margin-left: 10px;
+}
+.posicion-boton {
+  text-align: center;
+}
+.posicion-terminos {
+  grid-column: 1/3;
+  margin: 0 auto;
+}
+.style-boton {
+  padding: 10px 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: var(--fuente);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.style-boton:hover {
+  box-shadow: 0px 0px 40px rgb(163, 163, 163, 1);
+}
+.opacidad {
+  opacity: 50%;
+}
+.validacion {
+  cursor: not-allowed;
+}
+.grupo {
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+.grupo__input {
+  position: relative;
+}
+.input {
+  padding: 7px;
+  width: 90%;
+  border: 3px solid transparent;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fuente);
+  outline: none;
+}
+.crus {
+  position: absolute;
+  right: 15px;
+  bottom: 7px;
+  z-index: 100;
+  font-size: 20px;
+  opacity: 0;
+}
+.check {
+  position: absolute;
+  right: 15px;
+  bottom: 7px;
+  z-index: 100;
+  font-size: 20px;
+  opacity: 0;
+}
+.mensaje-error {
+  display: none;
+  font-size: 15px;
+}
+.mensaje-error-activo .mensaje-error {
+  display: block;
+}
+.mensaje-warning {
+  grid-column: 1/3;
+  text-align: center;
+  background-color: rgb(241, 99, 99);
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: none;
+}
+.mensaje-warning-activo {
+  display: block;
+}
+.estilo-texto {
+  margin-top: 10px;
+  color: green;
+  border: 2px solid green;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none;
+}
+.estilo-texto-activo {
+  display: block;
+}
+.correcto input {
+  border: 3px solid green;
+}
+.correcto .check {
+  color: green;
+  opacity: 1;
+}
+.incorrecto label {
+  color: red;
+}
+.incorrecto input {
+  border: 3px solid red;
+}
+.incorrecto .crus {
+  color: red;
+  opacity: 1;
+}
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.validar .checkbox:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  color: green;
+  display: none;
+}
+.validar .checkbox:checked {
+  border: 1px solid green;
+}
+.validar .checkbox:checked:after {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  body {
+    height: 800px;
+  }
+  form {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .posicion-boton {
+    grid-column: 1/3;
+    text-align: center;
+  }
+  .style-boton {
+    padding: 10px 90px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: var(--fuente);
+    font-weight: bold;
+  }
+  .input {
+    padding: 10px;
+    width: 90%;
+    position: relative;
+  }
+  .crus {
+    bottom: 14px;
+  }
+  .check {
+    bottom: 14px;
+  }
+}
